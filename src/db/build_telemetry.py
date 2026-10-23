@@ -50,6 +50,8 @@ def build_telemetry_m1(
     - Lê todos os telecommands de m1_dir/telecommands/telecommand_*.zip e grava em tc_executions.
     """
     m1_path = Path(m1_dir)
+    if not (m1_path / "channels").exists() and (m1_path / "ESA-Mission1" / "channels").exists():
+        m1_path = m1_path / "ESA-Mission1"
     channels_dir = m1_path / "channels"
     tc_dir = m1_path / "telecommands"
     
@@ -212,6 +214,8 @@ def build_telemetry_m2(
     - Lê telecomandos e grava em tc_executions.
     """
     m2_path = Path(m2_dir)
+    if not (m2_path / "channels").exists() and (m2_path / "ESA-Mission2" / "channels").exists():
+        m2_path = m2_path / "ESA-Mission2"
     channels_dir = m2_path / "channels"
     tc_dir = m2_path / "telecommands"
     
@@ -309,6 +313,21 @@ def build_telemetry_m2(
                 with conn:
                     conn.executemany(tc_insert_sql, tc_records)
                 tc_records.clear()
+
+        # 4. Grava metadados da carga
+        row_stat = conn.execute(
+            "SELECT COUNT(*) AS total, MIN(ts) AS min_ts, MAX(ts) AS max_ts FROM telemetry;"
+        ).fetchone()
+        meta_records = [
+            ("missao", "M2"),
+            ("n_leituras", str(row_stat["total"])),
+            ("inicio_ts", str(row_stat["min_ts"])),
+            ("fim_ts", str(row_stat["max_ts"])),
+            ("data_carga", datetime.now(timezone.utc).isoformat()),
+            ("versao_esquema", "1"),
+        ]
+        with conn:
+            conn.executemany("INSERT OR REPLACE INTO meta (chave, valor) VALUES (?, ?);", meta_records)
 
         conn.commit()
         conn.execute("PRAGMA synchronous = NORMAL;")

@@ -24,12 +24,13 @@ Os dados são organizados em quatro arquivos SQLite complementares em `data/db/`
 ```
 data/
 ├── db/
-│   ├── esa_catalog.sqlite       ← Metadados unificados, canais, telecomandos, labels auditadas, eventos, janelas e splits
-│   ├── esa_m1.sqlite            ← Telemetria em tabela larga (canais 41–46) e execuções de telecomandos de M1 (15,38M leituras)
-│   ├── esa_m2.sqlite            ← Telemetria em tabela larga (canais 18–28) e execuções de telecomandos de M2 (7,39M leituras)
-│   └── esa_experiments.sqlite   ← Execuções do modelo (runs), normalizações, scores por janela, episódios de alerta e métricas
+│   ├── esa_catalog.sqlite       ← Metadados unificados, canais, telecomandos, labels auditadas, eventos, janelas e splits (M1 + M2, 3,0 MB)
+│   ├── esa_m1.sqlite            ← Telemetria em tabela larga (canais 41–46) e execuções de telecomandos de M1 (15,38M leituras, 1,11 GB)
+│   ├── esa_m2.sqlite            ← Telemetria em tabela larga (canais 18–28) e execuções de telecomandos de M2 (7,39M leituras, 935 MB)
+│   └── esa_experiments.sqlite   ← Execuções do modelo (runs), normalizações, scores por janela, episódios de alerta e métricas (57 KB)
 └── processed/
-    └── M1/metade_temporal/      ← Tensores de janelas deslizantes (.npy) exportados para treino/validação/teste sem vazamento
+    ├── M1/metade_temporal/      ← Tensores de janelas (.npy) exportados para treino nominal/validação/teste sem vazamento (M1)
+    └── M2/metade_temporal/      ← Tensores de janelas (.npy) exportados para treino nominal/validação/teste sem vazamento (M2)
 ```
 
 ### Por que 4 arquivos?
@@ -52,15 +53,15 @@ uv venv .venv
 uv pip install -r requirements.txt
 ```
 
-### 2. Construir o Ecossistema de Dados
+### 2. Construir o Ecossistema de Dados Completo
 
-Para carregar os catálogos, processar a telemetria em tabela larga e validar tudo automaticamente:
+Para carregar os catálogos unificados, processar a telemetria em tabela larga de ambas as missões e exportar os datasets nominais:
 
 ```powershell
-python -m src.db.build_all --m1-dir "C:\caminho\para\ESA-Mission1" --export-ml
+python -m src.db.build_all --m1-dir "C:\caminho\para\ESA-Mission1" --m2-dir "C:\caminho\para\ESA-Mission2" --export-ml
 ```
 
-### 3. Rodar os Testes Automatizados
+### 3. Rodar os Testes Automatizados (10/10)
 
 ```powershell
 pytest -v tests/test_database_architecture.py
@@ -80,7 +81,9 @@ python -c "from src.db.verify_integrity import run_full_validation; run_full_val
 |---|---|---|
 | **Período de Telemetria** | 2000-01-01 a 2013-12-31 (~14 anos) | 2000-01-01 a 2003-06-30 (~3,5 anos) |
 | **Total de Leituras por Canal** | 15.381.169 | 7.387.262 |
-| **Linhas em `labels.csv`** | 3.589 auditadas | 11.167 auditadas |
+| **Linhas em `labels.csv`** | 3.589 auditadas (100% válidas) | 11.167 auditadas (100% válidas) |
 | **Eventos Consolidados no Recorte** | 118 (51 Anomaly, 63 Rare Event, 4 Gap) | 622 (19 Anomaly, 603 Rare Event, 0 Gap) |
-| **Janelas Contextuais Pareadas** | 708 (1h, 6h e 24h + referências) | Em derivação |
-| **Tamanho do Banco de Telemetria** | 1,11 GB | ~0,70 GB (estimado) |
+| **Janelas Contextuais Pareadas** | 708 (1h, 6h e 24h + referências) | 3.732 (1h, 6h e 24h + referências) |
+| **Execuções de Telecomandos** | 1.594.722 execuções (698 tipos) | Execuções completas (123 tipos) |
+| **Tamanho do Banco de Telemetria** | 1,11 GB | 935 MB |
+| **Tensores de Treino Nominal (.npy)** | shape (670.922, 60, 6) | shape (294.945, 60, 11) |

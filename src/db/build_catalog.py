@@ -91,7 +91,8 @@ def load_channels(conn: sqlite3.Connection, mission: str, channels_csv_path: Pat
     for _, row in df.iterrows():
         channel = str(row["Channel"]).strip()
         subsystem = str(row["Subsystem"]).strip() if pd.notna(row.get("Subsystem")) else None
-        phys_unit = str(row["PhysicalUnit"]).strip() if pd.notna(row.get("PhysicalUnit")) else None
+        phys_raw = row.get("Physical Unit") if "Physical Unit" in row else row.get("PhysicalUnit")
+        phys_unit = str(phys_raw).strip() if pd.notna(phys_raw) else None
         grp = int(row["Group"]) if pd.notna(row.get("Group")) else None
         target_str = str(row.get("Target", "")).strip().upper()
         is_target = 1 if target_str == "YES" else 0
@@ -416,6 +417,8 @@ def build_catalog_from_dir(
             # Processa Mission 1 se diretório fornecido
             if m1_dir and Path(m1_dir).exists():
                 m1_path = Path(m1_dir)
+                if not (m1_path / "channels.csv").exists() and (m1_path / "ESA-Mission1" / "channels.csv").exists():
+                    m1_path = m1_path / "ESA-Mission1"
                 load_channels(conn, "M1", m1_path / "channels.csv")
                 load_telecommands(conn, "M1", m1_path / "telecommands.csv")
                 load_event_types(conn, "M1", m1_path / "anomaly_types.csv")
@@ -426,6 +429,8 @@ def build_catalog_from_dir(
             # Processa Mission 2 se diretório fornecido
             if m2_dir and Path(m2_dir).exists():
                 m2_path = Path(m2_dir)
+                if not (m2_path / "channels.csv").exists() and (m2_path / "ESA-Mission2" / "channels.csv").exists():
+                    m2_path = m2_path / "ESA-Mission2"
                 load_channels(conn, "M2", m2_path / "channels.csv")
                 load_telecommands(conn, "M2", m2_path / "telecommands.csv")
                 load_event_types(conn, "M2", m2_path / "anomaly_types.csv")

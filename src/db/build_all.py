@@ -94,6 +94,8 @@ def main() -> int:
     if args.export_ml:
         logger.info("FASE 6: Exportando datasets para treino do Autoencoder (.npy)...")
         export_ml_dataset(mission="M1", split_id="metade_temporal", db_dir=db_path)
+        if m2_path and m2_path.exists():
+            export_ml_dataset(mission="M2", split_id="metade_temporal", db_dir=db_path)
 
     elapsed = time.time() - t0
     logger.info("======================================================================")

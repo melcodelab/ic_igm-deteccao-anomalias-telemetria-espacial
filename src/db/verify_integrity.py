@@ -60,6 +60,12 @@ def verify_catalog_consistency(db_dir: Optional[Path] = None) -> Tuple[bool, Lis
         if m1_total != 118:
             errors.append(f"[esa_catalog] M1 esperava 118 eventos derivados, encontrado {m1_total}.")
             
+        m2_total = sum(v for k, v in counts.items() if k[0] == "M2")
+        if m2_total > 0 and m2_total != 622:
+            errors.append(f"[esa_catalog] M2 esperava 622 eventos derivados, encontrado {m2_total}.")
+        elif m2_total == 622:
+            logger.info(f"[esa_catalog] OK: M2 com 622 eventos derivados confirmados (19 Anomalias, 603 Eventos Raros).")
+            
         # 2. Verifica se todo event_id de event_windows existe em events
         cur = conn.execute("""
             SELECT COUNT(*) AS orfaos
@@ -121,6 +127,20 @@ def verify_cross_db_integrity(db_dir: Optional[Path] = None) -> Tuple[bool, List
             total_m2 = cur.fetchone()["total"]
             if total_m2 != 7387262:
                 errors.append(f"[m2.telemetry] Contagem de leituras esperada 7.387.262, encontrada {total_m2:,}.")
+            else:
+                logger.info(f"[m2.telemetry] OK: 7.387.262 leituras confirmadas.")
+
+            cur = conn.execute("""
+                SELECT COUNT(DISTINCT t.telecommand) AS nao_catalogados
+                FROM m2.tc_executions t
+                LEFT JOIN telecommands c ON c.mission = 'M2' AND c.telecommand = t.telecommand
+                WHERE c.telecommand IS NULL;
+            """)
+            nao_cat_m2 = cur.fetchone()["nao_catalogados"]
+            if nao_cat_m2 > 0:
+                errors.append(f"[m2.tc_executions] {nao_cat_m2} telecomandos executados não estão no catálogo.")
+            else:
+                logger.info("[m2.tc_executions] OK: Todos os telecomandos executados da M2 estão devidamente catalogados.")
                 
     finally:
         conn.close()
