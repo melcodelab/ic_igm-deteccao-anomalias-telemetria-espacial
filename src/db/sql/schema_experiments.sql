@@ -80,3 +80,20 @@ CREATE TABLE IF NOT EXISTS metrics (
     valor     REAL    NOT NULL,
     PRIMARY KEY (run_id, escopo, metrica)
 );
+
+-- 8. Auditoria das explicações produzidas pelo copiloto MCP
+CREATE TABLE IF NOT EXISTS explanations (
+    explanation_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    alert_id        INTEGER,
+    run_id          INTEGER REFERENCES runs(run_id) ON DELETE SET NULL,
+    tool_name       TEXT NOT NULL,
+    pacote_json     TEXT NOT NULL,
+    resposta_bruta  TEXT NOT NULL,
+    verificador_ok  INTEGER NOT NULL CHECK (verificador_ok IN (0,1)),
+    regras_violadas TEXT NOT NULL DEFAULT '[]',
+    modelo_llm      TEXT NOT NULL,
+    temperatura     REAL,
+    criado_em       TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_explanations_alert ON explanations(alert_id);
+CREATE INDEX IF NOT EXISTS idx_explanations_created ON explanations(criado_em);

@@ -29,7 +29,7 @@ def main() -> int:
     parser.add_argument(
         "--m1-dir",
         type=str,
-        default=r"C:\Users\josej\Downloads\ESA-Mission1\ESA-Mission1",
+        required=True,
         help="Caminho do diretório raiz da Mission 1 (contendo channels.csv, labels.csv, etc.)",
     )
     parser.add_argument(
@@ -42,7 +42,7 @@ def main() -> int:
         "--db-dir",
         type=str,
         default=None,
-        help="Diretório onde os bancos SQLite serão criados (padrão: data/db/)",
+        help="Diretório onde os bancos SQLite serão criados (padrão: data/)",
     )
     parser.add_argument(
         "--skip-telemetry",

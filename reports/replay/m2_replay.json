@@ -1,0 +1,902 @@
+{
+  "mission": "M2",
+  "split": "balanceado_m2",
+  "records": [
+    {
+      "event_id": "id_154",
+      "categoria": "Rare Event",
+      "canais_rotulados": [
+        "channel_18",
+        "channel_19",
+        "channel_20",
+        "channel_21",
+        "channel_22",
+        "channel_23",
+        "channel_24",
+        "channel_25",
+        "channel_26",
+        "channel_27",
+        "channel_28"
+      ],
+      "evidencia": {
+        "alert_id": null,
+        "missao": "M2",
+        "periodo": {
+          "inicio": "2001-06-30T10:15:47Z",
+          "fim": "2001-07-01T04:07:05Z"
+        },
+        "canais_afetados": [
+          "channel_18",
+          "channel_19",
+          "channel_20",
+          "channel_21",
+          "channel_22",
+          "channel_23",
+          "channel_24",
+          "channel_25",
+          "channel_26",
+          "channel_27",
+          "channel_28"
+        ],
+        "scores_detector": {},
+        "qualidade_dos_dados": {
+          "status": "comprometida",
+          "n_leituras": 4285,
+          "cadencia_esperada_s": 18.0,
+          "lacunas": [],
+          "n_lacunas": 0,
+          "canais_travados": [
+            "channel_21",
+            "channel_22",
+            "channel_23",
+            "channel_24"
+          ],
+          "pct_valida_por_canal": {
+            "channel_18": 100.0,
+            "channel_19": 100.0,
+            "channel_20": 100.0,
+            "channel_21": 100.0,
+            "channel_22": 100.0,
+            "channel_23": 100.0,
+            "channel_24": 100.0,
+            "channel_25": 100.0,
+            "channel_26": 100.0,
+            "channel_27": 100.0,
+            "channel_28": 100.0
+          }
+        },
+        "telecomandos_recentes": {
+          "janela_minutos": 30,
+          "comandos": [
+            {
+              "telecommand": "telecommand_94",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_92",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_89",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_59",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_57",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_55",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_51",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_48",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_117",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_112",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_111",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_108",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_105",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_103",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_101",
+              "ts_ms": 993895499474,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_89",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_87",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_63",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_58",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_57",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_55",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_50",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_48",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_46",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_45",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_118",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_117",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_111",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_110",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_109",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_108",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_107",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_103",
+              "ts_ms": 993894599473,
+              "priority": 2
+            },
+            {
+              "telecommand": "telecommand_101",
+              "ts_ms": 993894599473,
+              "priority": 2
+            }
+          ],
+          "total": 34
+        },
+        "eventos_similares": {
+          "periodo_consultado": "treino+validacao",
+          "cutoff_ms": 993945599000,
+          "nominal": 227,
+          "anomalia": 18,
+          "eventos": [
+            {
+              "event_id": "id_152",
+              "category": "Rare Event",
+              "class": "class_30",
+              "inicio_ms": 993854277156,
+              "fim_ms": 993857465409,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_151",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 993762297003,
+              "fim_ms": 993764477256,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_150",
+              "category": "Rare Event",
+              "class": "class_30",
+              "inicio_ms": 993611621001,
+              "fim_ms": 993614357007,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_149",
+              "category": "Rare Event",
+              "class": "class_1",
+              "inicio_ms": 993050272068,
+              "fim_ms": 993054034077,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_148",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 992984949963,
+              "fim_ms": 992987215716,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_147",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 992588679306,
+              "fim_ms": 992591379309,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_146",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 992329514877,
+              "fim_ms": 992331962880,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_145",
+              "category": "Rare Event",
+              "class": "class_20",
+              "inicio_ms": 992141394315,
+              "fim_ms": 992143862568,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_9"
+              ],
+              "n_canais": 7
+            },
+            {
+              "event_id": "id_144",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 991948400244,
+              "fim_ms": 991950812250,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_143",
+              "category": "Rare Event",
+              "class": "class_30",
+              "inicio_ms": 991797233745,
+              "fim_ms": 991801808001,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_141",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 991170832707,
+              "fim_ms": 991173390960,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_140",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 990774292050,
+              "fim_ms": 990776490303,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_139",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 990515111868,
+              "fim_ms": 990517451874,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_138",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 990133961238,
+              "fim_ms": 990136247241,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_137",
+              "category": "Rare Event",
+              "class": "class_30",
+              "inicio_ms": 989982920739,
+              "fim_ms": 989987998995,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_136",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 989356089948,
+              "fim_ms": 989358537954,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_135",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 989096835519,
+              "fim_ms": 989099121522,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_134",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 988440914433,
+              "fim_ms": 988443128436,
+              "canais": [
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_133",
+              "category": "Rare Event",
+              "class": "class_19",
+              "inicio_ms": 988318964229,
+              "fim_ms": 988321247985,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            },
+            {
+              "event_id": "id_132",
+              "category": "Rare Event",
+              "class": "class_30",
+              "inicio_ms": 988168501980,
+              "fim_ms": 988172389986,
+              "canais": [
+                "channel_10",
+                "channel_11",
+                "channel_12",
+                "channel_13",
+                "channel_14",
+                "channel_15",
+                "channel_16",
+                "channel_17",
+                "channel_18",
+                "channel_19",
+                "channel_20",
+                "channel_21",
+                "channel_22",
+                "channel_23",
+                "channel_24",
+                "channel_25",
+                "channel_26",
+                "channel_27",
+                "channel_28",
+                "channel_9"
+              ],
+              "n_canais": 11
+            }
+          ],
+          "total_encontrado": 245
+        },
+        "historico_de_alertas": {
+          "disponivel": false,
+          "n": 0,
+          "anomalia": 0,
+          "evento_raro_nominal": 0,
+          "sem_rotulo": 0,
+          "nota": "Resumo somente de alertas anotados; ausência de rótulo não significa alerta falso.",
+          "periodo_consultado": "treino+validacao",
+          "cutoff_ms": 993896147000
+        },
+        "limite_historico_ms": 993945599000,
+        "timestamp_alerta_ms": 993960425000,
+        "nota": "Contexto histórico limitado a treino+validação; anotações do período atual não são usadas."
+      },
+      "resposta": "",
+      "regras_violadas": [],
+      "bloqueada": null,
+      "n_historico": 245,
+      "n_alertas_historicos": 0,
+      "ablations": {},
+      "ablation_evidencias": {},
+      "repeticoes": []
+    }
+  ],
+  "metrics": {
+    "n_explicacoes": 0,
+    "n_pacotes_preparados": 1,
+    "M1_violacoes": {
+      "por_regra": {},
+      "taxa_com_violacao": null
+    },
+    "M2_canais": {
+      "precision": null,
+      "recall": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "M3_categoria": {
+      "acuracia": null,
+      "n": 0,
+      "anomalia_tratada_como_nominal": 0
+    },
+    "M4_ablation_contexto": {},
+    "M5_estabilidade": {
+      "consistencia_exata_normalizada": null,
+      "n_casos_repetidos": 0
+    },
+    "M6_historico": {
+      "0": {
+        "acuracia_categoria": null,
+        "n": 0
+      },
+      "1-4": {
+        "acuracia_categoria": null,
+        "n": 0
+      },
+      "5+": {
+        "acuracia_categoria": null,
+        "n": 0
+      }
+    }
+  }
+}

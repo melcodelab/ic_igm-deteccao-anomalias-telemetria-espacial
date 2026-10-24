@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "spacecraft-telemetry": {
+      "type": "stdio",
+      "command": ".venv/bin/python",
+      "args": ["-m", "src.mcp.server"],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}

@@ -11,12 +11,12 @@ from pathlib import Path
 from typing import Optional
 
 # Diretório padrão onde residem os bancos SQLite
-DEFAULT_DB_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "db"
+DEFAULT_DB_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 DEFAULT_SQL_DIR = Path(__file__).resolve().parent / "sql"
 
 
 def ensure_db_dir(db_dir: Optional[Path] = None) -> Path:
-    """Garante que o diretório de bancos de dados exista."""
+    """Retorna o diretório dos bancos; não cria diretório em consultas de leitura."""
     target_dir = Path(db_dir) if db_dir else DEFAULT_DB_DIR
     target_dir.mkdir(parents=True, exist_ok=True)
     return target_dir

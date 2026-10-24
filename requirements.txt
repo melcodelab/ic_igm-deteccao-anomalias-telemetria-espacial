@@ -4,3 +4,9 @@ matplotlib>=3.7
 pyarrow>=14.0
 scipy>=1.10
 pytest>=8.0
+
+# MCP server
+fastmcp>=2.0,<3.0
+
+# Development tooling
+ruff>=0.5
